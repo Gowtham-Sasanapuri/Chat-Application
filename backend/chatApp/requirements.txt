@@ -1,7 +1,10 @@
 Django>=4.2
 djangorestframework
 channels
+channels_redis
 gunicorn
-uvicorn
+uvicorn[standard]==0.35.0
 django-cors-headers
 PyJWT
+websockets
+wsproto

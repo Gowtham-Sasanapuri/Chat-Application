@@ -5,3 +5,4 @@ gunicorn
 uvicorn
 django-cors-headers
 PyJWT
+PyMySQL

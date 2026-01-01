@@ -149,8 +149,7 @@ CHANNEL_LAYERS = {
     "default" :{
         "BACKEND" : "channels_redis.core.RedisChannelLayer",
         "CONFIG" : {
-            "hosts" :[("https://poetic-badger-9389.upstash.io",6379)],
-            "password" : "ASStAAImcDJlYTUyZmI5ZDFiNDI0YTk4ODY0YmExMjAzMDIyZDcxNHAyOTM4OQ",
+            "hosts" :[("https://poetic-badger-9389.upstash.io",6379,"ASStAAImcDJlYTUyZmI5ZDFiNDI0YTk4ODY0YmExMjAzMDIyZDcxNHAyOTM4OQ")],
         },
     },
 }

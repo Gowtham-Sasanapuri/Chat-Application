@@ -146,7 +146,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ASGI_APPLICATION = 'chatApp.asgi.application'
 
 CHANNEL_LAYERS = {
-    "default": {
-        "BACKEND": "channels.layers.InMemoryChannelLayer",
-    }
+    "default" :{
+        "BACKEND" : "channels_redis.core.RedisChannelLayer",
+        "CONFIG" : {
+            "hosts" :[("ASStAAImcDJlYTUyZmI5ZDFiNDI0YTk4ODY0YmExMjAzMDIyZDcxNHAyOTM4OQ",6379)],
+            "password" : "ASStAAImcDJlYTUyZmI5ZDFiNDI0YTk4ODY0YmExMjAzMDIyZDcxNHAyOTM4OQ",
+        },
+    },
 }
+

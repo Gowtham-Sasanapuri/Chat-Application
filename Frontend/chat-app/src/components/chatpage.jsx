@@ -39,7 +39,7 @@ export default function Chat({ username, req_user_id,fetch_users }) {
 
 
     useEffect(() => {
-        fetch("http://127.0.0.1:8000/fetch_message/", {
+        fetch("https://chat-application-1fco.onrender.com/fetch_message/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -56,7 +56,7 @@ export default function Chat({ username, req_user_id,fetch_users }) {
     }, [req_user_id])
 
     useEffect(() => {
-        let ws = new WebSocket(`ws://localhost:8000/ws/chat/${room}/`)
+        let ws = new WebSocket(`wss://chat-application-1fco.onrender.com/ws/chat/${room}/`)
         web.current = ws
 
         ws.onopen = () => {

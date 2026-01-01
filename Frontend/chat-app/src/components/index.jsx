@@ -36,7 +36,7 @@ export default function Index() {
             console.log(" ----->room still doesn't assigned");
             return ;
         }
-        let ws = new WebSocket(`ws://localhost:8000/ws/chat/user/${room}/`)
+        let ws = new WebSocket(`wss://chat-application-1fco.onrender.com/ws/chat/user/${room}/`)
 
         ws.onopen = () => {
             console.log(">>>socket opened");
@@ -65,7 +65,7 @@ export default function Index() {
 
 
     let fetch_users = (search_term = "") => {
-        fetch("http://127.0.0.1:8000/search_user/", {
+        fetch("https://chat-application-1fco.onrender.com/search_user/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

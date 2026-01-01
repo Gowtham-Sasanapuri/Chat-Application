@@ -9,7 +9,7 @@ export default function Login() {
     useEffect(() => {
         let token = localStorage.getItem("token") || null
         if (token) {
-            fetch(" http://127.0.0.1:8000/Login/", {
+            fetch("https://chat-application-1fco.onrender.com/Login/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -33,7 +33,7 @@ export default function Login() {
     let submit = (e) => {
         e.preventDefault()
 
-        fetch("http://127.0.0.1:8000/Login/", {
+        fetch("https://chat-application-1fco.onrender.com/Login/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -76,7 +76,7 @@ export default function Login() {
                 <div id="homebtn">
                 <button onClick={() =>{
                     console.log("btn");
-                 navigate("/")}}>Go to Home</button>
+                    navigate("/")}}>Go to Home</button>
                     
                 </div>
             </div>

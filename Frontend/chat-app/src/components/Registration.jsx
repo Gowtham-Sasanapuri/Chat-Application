@@ -10,7 +10,7 @@ export default function Register() {
 
     let Submit = (e) => {
         e.preventDefault()
-        fetch("http://127.0.0.1:8000/Register/", {
+        fetch("https://chat-application-1fco.onrender.com/Register/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -146,10 +146,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ASGI_APPLICATION = 'chatApp.asgi.application'
 
 CHANNEL_LAYERS = {
-    "default" :{
-        "BACKEND" : "channels_redis.core.RedisChannelLayer",
-        "CONFIG" : {
-            "hosts" :[("https://poetic-badger-9389.upstash.io",6379,"ASStAAImcDJlYTUyZmI5ZDFiNDI0YTk4ODY0YmExMjAzMDIyZDcxNHAyOTM4OQ")],
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [
+                "rediss://default:ASStAAImcDJlYTUyZmI5ZDFiNDI0YTk4ODY0YmExMjAzMDIyZDcxNHAyOTM4OQ@poetic-badger-9389.upstash.io:6379"
+            ],
         },
     },
 }

@@ -56,6 +56,7 @@ export default function Chat({ username, req_user_id,fetch_users }) {
     }, [req_user_id])
 
     useEffect(() => {
+        if (!room) return
         let ws = new WebSocket(`wss://chat-application-1fco.onrender.com/ws/chat/${room}/`)
         web.current = ws
 
@@ -76,7 +77,7 @@ export default function Chat({ username, req_user_id,fetch_users }) {
             console.log("🔒 WebSocket closed on cleanup")
         }
 
-    }, [req_user_id, room,fetch_users])
+    }, [room])
 
     let send = () => {
         if(!msg_to_send.trim()){
